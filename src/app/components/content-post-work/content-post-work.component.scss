@@ -1,0 +1,141 @@
+/* Estilos generales */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f4f8;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.task-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid #004A8F;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 26px;
+  color: #3366cc;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #004A8F;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.submit-btn:hover {
+  background-color: #3355aa;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección de Calendario */
+.calendar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 2px dashed #004A8F;
+}
+
+h3 {
+  font-size: 18px;
+  color: #004A8F;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+full-calendar {
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.calendar-image {
+  width: 80%;
+  max-width: 200px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+/* Estilos para input de fecha */
+input[type="date"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  background-color: #f9fafb;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="date"]:focus {
+  border-color: #004A8F;
+  box-shadow: 0 0 8px rgba(0, 74, 143, 0.2);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .task-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .calendar-section {
+    margin-top: 20px;
+  }
+
+  full-calendar {
+    width: 100%;
+    max-width: none;
+  }
+}

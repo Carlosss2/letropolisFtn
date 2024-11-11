@@ -1,0 +1,109 @@
+/* Contenedor de video */
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background-color:  #f0f4ff;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 1500px; /* Ampliado */
+    margin-bottom: 30px;
+}
+
+/* Estilos del video */
+.video-player {
+    width: 100%;
+    max-width: 1000px; /* Ampliado para facilitar la visualización */
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+/* Información del video */
+.video-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.video-title {
+    font-size: 2em; /* Tamaño de fuente más grande */
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.video-description {
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+    color: #666;
+    margin: 0;
+}
+
+.icon {
+    width: 20px; /* Tamaño de los iconos */
+    height: auto;
+    margin-right: 8px; /* Espacio entre el icono y el texto en "Anterior" */
+    margin-left: 8px;  /* Espacio entre el icono y el texto en "Siguiente" */
+    vertical-align: middle; /* Centra el icono verticalmente */
+}
+
+/* Botones de navegación */
+.video-navigation {
+    display: flex;
+    gap: 660px; /* Separación ajustada entre los botones */
+}
+
+.prev-button, .next-button {
+    display: flex;
+    align-items: center; /* Centra el contenido del botón */
+    background-color: #4c6ef5;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: #3b5bdb;
+}
+
+.presentation-image {
+    margin-top: 70px;
+    width: 100%;
+    max-width: 1505px;
+    height: 550px;
+    position: relative;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+
+/* Contenedor del gif Dino sobre la imagen de bienvenida */
+.hola-dino {
+    position: absolute; /* Ubica el gif sobre la imagen de bienvenida */
+    top: 230px; /* Ajusta la posición vertical */
+    left: 170px; /* Ajusta la posición horizontal */
+    z-index: 2; /* Asegura que esté por encima de la imagen de bienvenida */
+}
+
+
+
+/* Tamaño y estilo del gif Dino */
+.dino-gif {
+    width: 180px;
+    height: auto; /* Mantiene la proporción del gif */
+    border-radius: 10px;
+}
+
+
+.presentation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}

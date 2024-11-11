@@ -1,0 +1,66 @@
+/* Estilos generales para la tarjeta de comentarios */
+.comment-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Ancho máximo de la tarjeta */
+    margin: 20px auto; /* Centramos la tarjeta */
+    text-align: center; /* Centramos el texto */
+    position: relative; /* Posicionamos el contenedor */
+    overflow: hidden; /* Ocultamos el desbordamiento */
+}
+
+.comment-card h1 {
+    font-family: 'Comic Sans MS', sans-serif;
+    color: #004A8F;
+}
+
+/* Estilos para la sección de comentarios */
+.comments {
+    position: relative;
+    height: 60px; /* Altura de la sección de comentarios */
+    animation: slide 12s infinite; /* Animación continua */
+}
+
+.comment {
+    opacity: 0;
+    position: absolute; /* Posición absoluta para superponer comentarios */
+    width: 100%;
+    transition: opacity 0.5s ease; /* Transición suave */
+}
+
+.comment.active {
+    opacity: 1; /* Mostrar comentario activo */
+}
+
+/* Media queries para hacer responsive */
+@media (max-width: 768px) {
+    .comment-card {
+        max-width: 90%; /* Ancho máximo reducido en móviles */
+        padding: 15px; /* Reducción de padding en móviles */
+    }
+
+    .comment-card h1 {
+        font-size: 20px; /* Tamaño de fuente reducido para títulos */
+    }
+
+    .comments {
+        height: 50px; /* Ajustar la altura en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .comment-card {
+        padding: 10px; /* Reducción adicional de padding en pantallas más pequeñas */
+    }
+
+    .comment-card h1 {
+        font-size: 18px; /* Tamaño de fuente aún más reducido para títulos */
+    }
+
+    .comments {
+        height: 40px; /* Ajustar la altura en pantallas pequeñas */
+    }
+}

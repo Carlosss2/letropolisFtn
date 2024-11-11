@@ -1,0 +1,29 @@
+<div class="welcome-container">
+    <div class="presentation-image">
+      <img src="https://static.vecteezy.com/system/resources/previews/022/425/733/original/river-landscape-illustration-with-view-mountains-green-fields-trees-and-forest-surrounding-the-rivers-in-flat-cartoon-hand-drawn-templates-vector.jpg" alt="Bienvenida">
+      
+      <div class="hola-dino2">
+        <img src="https://i.pinimg.com/originals/14/28/ac/1428ac482dc2171c34cc895df0ba52eb.gif" alt="">
+      </div>
+      <div class="hola-dino">
+        <img src="https://i.pinimg.com/originals/8d/05/16/8d0516b7172ef7acc99de78664ef3ada.png" alt="holaDino" class="dino-gif">
+      </div>
+    
+    </div>
+   
+    <div>
+      <h2 class="titulo">Tareas asignadas</h2>
+      <div class="tarea-grid">
+        <div *ngFor="let tarea of tareas; let i = index" class="tarea-card" [ngStyle]="{'border-color': colores[i % colores.length]}">
+          <div class="card-info-container">
+            <div class="card-header">{{ tarea.titulo }}</div>
+          </div>
+          <div class="card-image-container">
+            <img [src]="tarea.imagenUrl" alt="Imagen de {{ tarea.titulo }}" class="card-image">
+          </div>
+          <button class="upload-button">Cargar Tarea</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

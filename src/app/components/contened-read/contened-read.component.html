@@ -1,0 +1,23 @@
+<div class="welcome-container">
+    <div class="presentation-image">
+      <img src="https://editorialsentir.com/wp-content/uploads/2023/07/LEER-PARA-CRECER.png" alt="Bienvenida">
+    </div>
+    <div>
+      <h2 class="titulo">Lecturas disponibles</h2>
+      <div class="lecturas-grid">
+        <div *ngFor="let lectura of lecturas" class="lectura-card">
+          <!-- Contenedor del título de la lectura -->
+          <div class="card-info-container">
+            <div class="card-header">{{ lectura.titulo }}</div>
+          </div>
+          <!-- Contenedor de la imagen de la lectura -->
+          <div class="card-image-container">
+            <img [src]="lectura.imagenUrl" alt="Imagen de {{ lectura.titulo }}" class="card-image">
+          </div>
+          <!-- Botón para leer -->
+          <button class="read-button">Leer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

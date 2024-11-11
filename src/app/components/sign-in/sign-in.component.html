@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Bienvenido a Letropolis</h1>
+    <label for="role">Selecciona tu rol:</label>
+   
+    <div class="cards-container">
+        <div class="card profesor-card">
+            <img src="https://png.pngtree.com/png-clipart/20220910/original/pngtree-math-teacher-man-in-front-of-the-class-holding-book-illustration-png-image_8525333.png" alt="Profesor" class="card-image">
+            <h1>Profesor</h1>
+            <p>Como profesor, podrás gestionar las lecciones y seguir el progreso de tus alumnos.</p>
+            <button (click)=" routeSignInTeacher()">Registrar como Profesor</button>
+        </div>
+        <div class="card alumno-card">
+            <img src="https://cdn1.iconfinder.com/data/icons/education-1-15/151/2-512.png" alt="Alumno" class="card-image">
+            <h1>Alumno</h1>
+            <p>Como alumno, podrás acceder a las lecciones, realizar actividades y divertirte.</p>
+            <button (click)="routeSignInStudent()">Registrar como Alumno</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container">
+   
+    <label for="role">Selecciona:</label>
+   
+    <div class="cards-container">
+        <div class="card profesor-card">
+            <img src="https://static.vecteezy.com/system/resources/previews/011/385/238/non_2x/review-flat-icon-free-vector.jpg" alt="Profesor" class="card-image">
+            <h1>Revisar Tareas</h1>
+            <p>Revisa las actividades hechas por los alumnos, para ver su progreso.</p>
+            <button (click)="routeWorkStudent()">Revisar tareas</button>
+        </div>
+        <div class="card alumno-card" >
+            <img src="https://img.icons8.com/?size=100&id=67401&format=png&color=000000" alt="Alumno" class="card-image">
+            <h1>Tareas Publicadas</h1>
+            <p>Revisa las actividades que has publicado con anterioridad.</p>
+            <button (click)="routePostWork()">Ver tareas publicadas</button>
+        </div>
+    </div>
+</div>

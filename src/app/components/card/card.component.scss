@@ -1,0 +1,46 @@
+.juegos, .escribir-leer, .numeros {
+    background-color: white;
+    border-radius: 10px; /* Ajusta el radio para bordes cuadradas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar las tarjetas */
+    padding: 20px;
+    text-align: center;
+    width: 150px;
+    margin: 15px;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.juegos:hover, .escribir-leer:hover, .numeros:hover {
+    transform: scale(1.05); /* Efecto de agrandamiento */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada en hover */
+}
+
+.juegos img, .escribir-leer img, .numeros img {
+    width: 80px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.juegos img:hover, .escribir-leer img:hover, .numeros img:hover {
+    transform: scale(1.1); /* Agranda la imagen al pasar el ratón */
+}
+
+.juegos p, .escribir-leer p, .numeros p {
+    color: #004A8F;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fuente amigable para niños */
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Estilos responsive para móviles */
+@media (max-width: 768px) {
+    .juegos, .escribir-leer, .numeros {
+        width: 100%; /* Las tarjetas ocuparán todo el ancho disponible */
+        margin: 10px 0; /* Espaciado vertical para evitar el desbordamiento */
+    }
+
+    .juegos, .escribir-leer, .numeros {
+        display: block; /* Cambia a bloque para apilar las tarjetas */
+    }
+}

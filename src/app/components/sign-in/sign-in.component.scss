@@ -1,0 +1,70 @@
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    color: #004A8F;
+    font-size: 36px; /* Tamaño más grande */
+    font-weight: bold; /* Negrita */
+}
+
+label {
+    display: block;
+    margin: 20px 0 10px;
+    font-size: 24px; /* Tamaño más grande */
+    color: #333;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center; /* Centra las tarjetas */
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%; /* Por defecto ocupa todo el ancho */
+    max-width: 400px; /* Ancho máximo de cada tarjeta */
+    transition: transform 0.3s ease;
+    margin: 10px; /* Espaciado entre tarjetas */
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido esté en columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+}
+
+.card-image {
+    width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    margin-bottom: 20px; /* Espacio inferior para la imagen */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+button {
+    background-color: #004A8F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Espacio superior para el botón */
+}
+
+button:hover {
+    background-color: #003366; /* Color más oscuro al pasar el ratón */
+}

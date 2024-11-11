@@ -1,0 +1,185 @@
+/* Contenedor principal para app-content-post-work */
+app-content-post-work {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Ajusta el tamaño de la vista */
+  margin: 20px auto; /* Margen para centrar en pantalla */
+  padding: 20px;
+}
+
+
+.task-container {
+  width: 90%;
+  max-width: 800px; /* Tamaño máximo para el contenedor */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+  border: 2px solid #004A8F; /* Borde en azul para que combine */
+}
+
+/* Ajuste de estilos dentro de la tarea */
+.form-section, .calendar-section {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.calendar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2, h3 {
+  text-align: center;
+  color: #004A8F; /* Azul en encabezados */
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #004A8F;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #003366;
+}
+
+/* Estilos para vista móvil */
+@media (max-width: 768px) {
+  .task-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  app-content-post-work {
+    height: auto;
+  }
+}
+
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  background-color: #004A8F; /* Color azul para el sidenav */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.sidenav.active {
+  transform: translateX(0);
+}
+
+.sidenav .mat-toolbar {
+  background: #003366; /* Fondo para el encabezado del menú */
+  color: white;
+}
+
+.sidenav p {
+  color: white; /* Etiquetas p en blanco */
+  display: inline; /* Para alinear con iconos */
+  margin-left: 8px; /* Espacio entre icono y texto */
+}
+
+.sidenav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: flex; /* Para alinear iconos y texto */
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.sidenav a:hover {
+  background-color: #003366;
+}
+
+.nav-icon {
+  width: 24px; /* Ajusta el tamaño del icono */
+  height: 24px; /* Ajusta el tamaño del icono */
+  margin-right: 8px; /* Espacio entre icono y texto */
+}
+
+.mat-toolbar.mat-primary {
+  background-color: #FDFDFD;
+  color: #004A8F;
+  box-shadow: 2px 6px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center; /* Alineación vertical */
+  padding: 20px;
+  font-size: 24px;
+}
+
+.logo {
+  height: 40px; /* Ajusta la altura del logo */
+  margin-right: 10px; /* Espacio entre el logo y "Letropolis" */
+}
+
+.letropolis {
+  color: #003366 ; /* Color de texto para Letropolis */
+  font-family: 'Comic Sans MS', sans-serif; /* Tipografía para Letropolis */
+  margin-right: 10px; /* Espacio entre "Letropolis" y "Inicio" */
+}
+
+.inicio {
+  color: black; /* Color de texto para Inicio */
+  font-family: 'Comic Sans MS', sans-serif; /* Tipografía para Inicio */
+}
+
+.header-images {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header-image {
+  height: 30px; /* Ajusta la altura de las imágenes del header */
+  margin-left: 10px; /* Espacio entre imágenes */
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .sidenav {
+    transform: translateX(-100%);
+  }
+
+  .sidenav.active {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

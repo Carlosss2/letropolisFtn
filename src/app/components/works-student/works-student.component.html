@@ -1,0 +1,24 @@
+<div class="welcome-container">
+  <div class="presentation-image">
+    <img src="https://www.r2docuo.com/es/wp-content/uploads/sites/3/2022/08/Header-landing-auditorias-e1660140535677.png" alt="Bienvenida">
+  </div>
+  <div>
+    <h2 class="titulo">Tareas hechas por alumnos</h2>
+    <div class="tareas-grid">
+      <div *ngFor="let tarea of tareas" class="tarea-card">
+        <!-- Contenedor de la imagen -->
+        <div class="card-image-container">
+          <img [src]="tarea.imagenUrl" alt="Imagen de {{ tarea.nombreTarea }}" class="card-image">
+        </div>
+        <!-- Contenedor de la información de la tarea -->
+        <div class="card-info-container">
+          <div class="card-header">{{ tarea.nombreTarea }}</div>
+          <div class="card-content">
+            <h4>Número de Actividad: {{ tarea.numeroActividad }}</h4>
+            <p><strong>Alumno:</strong> {{ tarea.alumno }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
