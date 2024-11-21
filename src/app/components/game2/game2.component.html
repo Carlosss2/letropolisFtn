@@ -1,0 +1,65 @@
+<div class="body">
+    <div class="game-container">
+      <!-- Controles adicionales arriba -->
+      <div class="extra-controls">
+        <button class="save-button" (click)="savePoints()">
+          
+          Guardar Puntos
+        </button>
+        <button class="exit-button" (click)="exitGame()">
+        
+          Salir
+        </button>
+      </div>
+    
+      <!-- Título -->
+      <h1>Carrera de Letras</h1>
+      
+      <!-- Carretera con carriles -->
+      <div class="road">
+        <div class="lane" *ngFor="let lane of lanes; index as i">
+          <div class="letter" *ngIf="options[i]" class="lane-option">{{ options[i].letter }}</div>
+          <div
+            class="car"
+            *ngIf="i === currentLane"
+            style="background-image: url('https://static.vecteezy.com/system/resources/previews/001/193/877/original/sport-car-png.png');"
+          ></div>
+        </div>
+      </div>
+      <div class="check-buttons">
+        <button *ngFor="let option of options" class="check-button" (click)="checkLane(option)">
+          Confirmar Carril
+        </button>
+      </div>
+      <!-- Controles de juego -->
+      <div class="controls">
+        <button class="arrow-button" (click)="moveCar('left')">
+          <img src="https://img.icons8.com/?size=100&id=CVeVMvhFYDsg&format=png&color=000000" alt="Izquierda"/>
+        </button>
+        <!-- Volante centrado -->
+        <div class="steering-wheel"></div>
+        <button class="arrow-button" (click)="moveCar('right')">
+          <img src="https://img.icons8.com/?size=100&id=woNBFlqmRF7y&format=png&color=000000" alt="Derecha"/>
+        </button>
+      </div>
+  
+      <!-- Botón de escuchar letra -->
+      <div class="play-audio-container">
+        <button class="play-audio-button" (click)="playAudio()">Escuchar Letra</button>
+      </div>
+  
+      <!-- Confirmar Carril -->
+      
+  
+      <!-- Feedback -->
+      <p class="feedback">{{ feedback }}</p>
+  
+      <!-- Barra de progreso -->
+      <div class="progress-bar-container">
+        <div class="progress-bar">
+          <div class="progress" [style.width.%]="progress"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

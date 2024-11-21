@@ -18,9 +18,7 @@ export class LandigPageComponent {
   constructor(private router: Router){
 
   }
-
  
-
   
   routeSignIn(){
     this.router.navigate(["/signIn"])

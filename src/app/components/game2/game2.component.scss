@@ -1,0 +1,276 @@
+/* Fondo de pantalla */
+.body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/006/236/082/non_2x/race-track-with-start-or-finish-line-free-vector.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Press Start 2P', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  /* Contenedor principal */
+  .game-container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 5px solid #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+  
+  /* Título */
+  h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    color: #ffcc00;
+    text-shadow: 2px 2px 0 #000, 4px 4px 0 #ff5722;
+    margin: 20px 0;
+  }
+  
+  /* Botones de guardar y salir (arriba) */
+  .extra-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .extra-controls button {
+    background-color: #ff5722;
+    color: white;
+    font-size: 1.1em;
+    padding: 12px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .extra-controls button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+  
+  .extra-controls button:hover {
+    background-color: #e64a19;
+  }
+  
+  /* Carretera con carriles */
+  .road {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    margin: 20px auto;
+    width: 100%;
+    border: 5px dashed white;
+    position: relative;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Carril */
+  .lane {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+  }
+  
+  .lane:last-child {
+    border-right: none;
+  }
+  
+  .lane.target {
+    background-color: rgba(255, 255, 0, 0.2);
+  }
+  
+  /* Opciones en la pista */
+  .lane-option {
+    font-size: 2.5em;
+    color: #ffcc00;
+    text-shadow: 2px 2px 0 #000, 4px 4px 0 #ff5722;
+  }
+  
+  /* Coche */
+  .car {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+  }
+  
+  /* Controles de juego */
+  .controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .arrow-button {
+    background-color: #4caf50;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .arrow-button img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .arrow-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Imagen del volante centrada */
+  .steering-wheel {
+    width: 60px;
+    height: 60px;
+    background-image: url('https://www.ahiva.info/Gifs-Animados/Mecanica/Volantes/Volante-de-auto-07.gif'); /* Cambia esta URL por la imagen de volante */
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 20px;
+   
+  }
+  
+  /* Animación del volante */
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Botón de escuchar letra */
+  .play-audio-container {
+    margin-top: 20px;
+  }
+  
+  .play-audio-button {
+    background-color: #ffcc00;
+    color: black;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    margin: 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .play-audio-button:hover {
+    background-color: #e6b800;
+    transform: scale(1.1);
+  }
+  
+  /* Botón de confirmar carril */
+  .check-button {
+    background-color: #ffcc00;
+    color: black;
+    padding: 20px 40px;
+    font-size: 1.2em;
+    margin: 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Press Start 2P', sans-serif;
+  }
+  
+  .check-button:nth-child(1) {
+    background-color: #4caf50; /* Acelerador */
+  }
+  
+  .check-button:nth-child(2) {
+    background-color: #f44336; /* Freno */
+  }
+  
+  .check-button:nth-child(3) {
+    background-color: #9e9e9e; /* Embrague */
+  }
+  
+  .check-button:hover {
+    background-color: #e6b800;
+    transform: scale(1.1);
+  }
+  
+  /* Feedback */
+  .feedback {
+    margin: 20px 0;
+    font-size: 1.5em;
+    color: yellow;
+  }
+  
+  /* Barra de progreso */
+  .progress-bar-container {
+    width: 80%;
+    margin: 20px auto;
+    border: 4px solid white;
+    background-color: #333;
+    border-radius: 10px;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    height: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background: #4caf50;
+    transition: width 0.5s ease;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .game-container {
+      width: 90%;
+    }
+  
+    h1 {
+      font-size: 2em;
+    }
+  
+    .controls button,
+    .check-button,
+    .extra-controls button {
+      font-size: 1em;
+      padding: 8px 16px;
+    }
+  
+    .controls .steering-wheel {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  

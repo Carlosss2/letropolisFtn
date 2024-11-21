@@ -1,0 +1,239 @@
+/* game3.component.scss */
+
+/* Fondo de la página */
+/* game3.component.scss */
+
+/* Fondo de la página */
+.body {
+    background-image: url('https://cdn.pixabay.com/photo/2022/09/09/01/23/cartoon-7442135_1280.png'); /* Fondo estilo retro Mario Bros */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P', Arial, sans-serif; /* Fuente estilo arcade */
+    color: white;
+  }
+  
+  /* Contenedor principal del juego */
+  .game-container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para resaltar */
+    border: 5px solid #9557fa; /* Bordes blancos pixelados */
+    border-radius: 0; /* Sin bordes redondeados */
+    padding: 20px;
+    width: 1600px;
+    max-width: 600px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+  
+  /* Título del juego */
+  h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    color: #9557fa;
+    text-shadow: 2px 2px 0 #000, 4px 4px 0 #22c4ff;
+    margin: 20px 0;
+  }
+  
+  /* Texto de nivel y puntos */
+  p {
+    font-size: 20px;
+    margin: 5px 0;
+  }
+  
+  /* Barra de progreso */
+  .progress-bar-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    border: 4px solid white; /* Bordes blancos */
+    background-color: #333; /* Fondo oscuro */
+    border-radius: 10px;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    height: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #4CAF50;
+    width: 0;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  /* Botones generales */
+  button {
+    background-color: #9557fa;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    margin-left: 20px;
+  }
+  .header-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  button:hover {
+    background-color: #ff4747;
+    transform: scale(1.1);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  button.exit {
+    background-color: #4c89e5;
+  }
+  
+  button.exit:hover {
+    background-color: #3a72c9;
+  }
+  
+  /* Contenedor de las letras flotantes */
+  .letters-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+    animation: floatingLetters 4s ease-in-out infinite; /* Animación de movimiento */
+  }
+  
+  .letter {
+    font-size: 40px;
+    margin: 10px;
+    padding: 15px;
+    border: 3px solid #9557fa;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s, background-color 0.3s ease;
+    animation: moveFloatingLetter 4s ease-in-out infinite; /* Animación de movimiento flotante */
+  }
+  
+  /* Animación para mover las letras en el contenedor */
+  @keyframes floatingLetters {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-20px); }
+    50% { transform: translateY(10px); }
+    75% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+  }
+  
+  /* Efecto hover sobre las letras */
+  .letter.floating:hover {
+    transform: translateY(-15px);
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Animación de movimiento flotante */
+  @keyframes moveFloatingLetter {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(-10px); }
+  }
+  
+  /* Contenedores donde se agrupan las letras */
+  .dropzones {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  
+  .dropzone {
+    border: 3px dashed #fff;
+    padding: 30px;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efecto hover sobre los contenedores */
+  .dropzone:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .matched-letters {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ffeb3b; /* Amarillo brillante */
+  }
+  
+  /* Botón de salir */
+  .exit-btn-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .exit-btn-container button {
+    background-color: #ff4d4d;
+    padding: 12px 30px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  .exit-btn-container button:hover {
+    background-color: #d93f3f;
+    transform: scale(1.1);
+  }
+  
+  .exit-btn-container button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Botones de la cabecera */
+  .header-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .exit-button, .save-button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: 3px solid #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .exit-button:hover {
+    background-color: #d32f2f;
+    transform: scale(1.1);
+  }
+  
+  .save-button {
+    background-color: #4CAF50;
+  }
+  
+  .save-button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+  }
+  

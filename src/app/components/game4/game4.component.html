@@ -1,0 +1,56 @@
+<div class="cuerpo">
+    <div class="game-container2"> 
+        <h1>Palabras locas</h1>
+        <div class="mapa">
+            <div *ngFor="let letter of lettersOnMap" class="letter" 
+                 [style.top.%]="letter.y * 10" 
+                 [style.left.%]="letter.x * 10">
+              {{ letter.letter }}
+            </div>
+            <img [src]="playerImageUrl" alt="Gusanito" class="player" 
+                 [style.top.%]="playerPosition.y * 10" 
+                 [style.left.%]="playerPosition.x * 10">
+          </div>
+       
+          <div class="controls">
+            <button class="control-btn" (click)="movePlayer('up')">
+            ⬆️
+            </button>
+            <div class="horizontal-controls">
+              <button class="control-btn" (click)="movePlayer('left')">
+                ⬅️
+              </button>
+              <button class="control-btn" (click)="movePlayer('right')">
+                ➡️
+              </button>
+            </div>
+            <button class="control-btn" (click)="movePlayer('down')">
+              ⬇️
+            </button>
+          </div>
+          <div class="palabra">
+           <h3 class="title">Palabra recolectada:</h3>
+           <p class="text">{{ collectedLetters.join('') }}</p>
+           <button class="confirm" (click)="confirmWord()">Confirmar palabra</button>
+         </div>
+
+    </div>
+    <div class="game-container">
+        <div class="save-points">
+            <button class="exit-button" (click)="saveScore()">Guardar puntos</button>
+            <button class="save-button" (click)="exitGame()">Salir</button>
+          </div>
+        <div class="img-reto">
+            <img [src]="currentChallenge.imageUrl" alt="Reto" class="challenge-image" />
+            
+          </div>
+          
+          
+           <div class="progress-bar">
+             <div class="progress" [style.width.%]="progress"></div>
+           </div>
+           
+        
+    </div>
+</div>
+

@@ -18,6 +18,12 @@ import { CurseWritingComponent } from './components/curse-writing/curse-writing.
 import { TasksComponent } from './components/tasks/tasks.component';
 import { CurseNumberComponent } from './components/curse-number/curse-number.component';
 import { RewardsComponent } from './components/rewards/rewards.component';
+import { VideogamesComponent } from './components/videogames/videogames.component';
+import { Game1Component } from './components/game1/game1.component';
+import { Game2Component } from './components/game2/game2.component';
+import { Game3Component } from './components/game3/game3.component';
+import { Game4Component } from './components/game4/game4.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 export const routes: Routes = [
     {
@@ -83,6 +89,21 @@ export const routes: Routes = [
     },
     {
         path:"rewards",component:RewardsComponent
+    },
+    {
+        path:"videogames",component:VideogamesComponent
+    },
+    {
+        path:"gameAverage",component:Game1Component
+    },
+    {
+        path:"gameCars",component:Game2Component
+    },{
+        path:"gameSpace",component:Game3Component
+    },{
+        path: "gameScrable",component:Game4Component
+    },{
+        path:"settings",component:SettingsComponent
     }
     
 

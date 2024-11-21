@@ -1,0 +1,21 @@
+<div class="body">
+  <div class="background">
+    <div class="game-container">
+      <div class="header-buttons">
+        <button class="exit-button" (click)="exitGame()">Salir</button>
+        <button class="save-button" (click)="savePoints()">Guardar Puntos</button>
+      </div>
+      <h1 class="game-title">Recolección de Letras</h1>
+      <button class="audio-button" (click)="playAudio()">Reproducir Letra</button>
+      <div class="options">
+        <button *ngFor="let option of options" (click)="selectOption(option)">{{ option.letter }}</button>
+      </div>
+      <p class="feedback">{{ feedback }}</p>
+    </div>
+    <div class="progress-bar-container">
+      <div class="progress-bar">
+        <div class="progress" [style.width.%]="progress"></div>
+      </div>
+    </div>
+  </div>
+</div>

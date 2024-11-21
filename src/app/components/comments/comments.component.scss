@@ -1,22 +1,27 @@
 /* Estilos generales para la tarjeta de comentarios */
 .comment-card {
-    background-color: #ffffff;
+    background-color: #f0f0f0;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px; /* Ancho máximo de la tarjeta */
+    max-width: 800px; /* Ancho máximo de la tarjeta */
     margin: 20px auto; /* Centramos la tarjeta */
     text-align: center; /* Centramos el texto */
     position: relative; /* Posicionamos el contenedor */
     overflow: hidden; /* Ocultamos el desbordamiento */
+    height: 200px; /* Mayor altura para la tarjeta */
+    width: 100%;
 }
 
-.comment-card h1 {
+.comment-card  {
     font-family: 'Comic Sans MS', sans-serif;
+    color: #000000;
+}
+h1{
+    font-weight: bold;
     color: #004A8F;
 }
-
 /* Estilos para la sección de comentarios */
 .comments {
     position: relative;
