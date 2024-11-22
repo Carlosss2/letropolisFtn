@@ -1,15 +1,20 @@
 import { Component, AfterViewInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-
+import { MatDialog } from '@angular/material/dialog';
+import { DialogDeleteStudentComponent } from '../dialog-delete-student/dialog-delete-student.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-table-student',
   standalone: true,
-  imports: [MatTableModule, MatPaginatorModule],
+  imports: [MatTableModule, MatPaginatorModule, CommonModule, MatDialogModule, MatButtonModule],
   templateUrl: './table-student.component.html',
   styleUrls: ['./table-student.component.scss']
 })
 export class TableStudentComponent implements AfterViewInit {
+  constructor(public dialog: MatDialog) {}
 
   displayedColumns: string[] = ['matricula', 'nombre', 'apellidoPaterno', 'apellidoMaterno', 'acciones'];
   dataSource = new MatTableDataSource<Student>(ELEMENT_DATA);
@@ -21,7 +26,16 @@ export class TableStudentComponent implements AfterViewInit {
   }
 
   eliminarEstudiante(matricula: number) {
-    this.dataSource.data = this.dataSource.data.filter(student => student.matricula !== matricula);
+    const dialogRef = this.dialog.open(DialogDeleteStudentComponent, {
+      width: '300px',
+      data: { matricula },
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.dataSource.data = this.dataSource.data.filter(student => student.matricula !== matricula);
+      }
+    });
   }
 }
 

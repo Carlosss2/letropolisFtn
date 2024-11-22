@@ -34,17 +34,41 @@
     text-shadow: 2px 2px 0 #000, 4px 4px 0 #ff5722;
     margin: 20px 0;
   }
+  .exit-button, .save-button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: 3px solid #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .exit-button:hover {
+    background-color: #d32f2f;
+    transform: scale(1.1);
+  }
+  
+  .save-button {
+    background-color: #4CAF50;
+  }
+  
+  .save-button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+  }
   
   /* Botones de guardar y salir (arriba) */
   .extra-controls {
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     width: 100%;
     margin-bottom: 10px;
   }
   
   .extra-controls button {
-    background-color: #ff5722;
+    background-color: #f44336;
     color: white;
     font-size: 1.1em;
     padding: 12px 20px;
@@ -125,7 +149,7 @@
   }
   
   .arrow-button {
-    background-color: #4caf50;
+    background-color: #c93b17;
     color: white;
     font-size: 1.2em;
     padding: 10px 20px;
@@ -149,7 +173,7 @@
   .steering-wheel {
     width: 60px;
     height: 60px;
-    background-image: url('https://www.ahiva.info/Gifs-Animados/Mecanica/Volantes/Volante-de-auto-07.gif'); /* Cambia esta URL por la imagen de volante */
+    background-image: url('http://clipart-library.com/images_k/steering-wheel-transparent-background/steering-wheel-transparent-background-23.png'); /* Cambia esta URL por la imagen de volante */
     background-size: contain;
     background-repeat: no-repeat;
     margin: 0 20px;
@@ -174,6 +198,7 @@
   .play-audio-button {
     background-color: #ffcc00;
     color: black;
+    font-weight: bold;
     padding: 15px 30px;
     font-size: 1.2em;
     margin: 10px;
@@ -192,28 +217,29 @@
   /* Botón de confirmar carril */
   .check-button {
     background-color: #ffcc00;
-    color: black;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
     padding: 20px 40px;
     font-size: 1.2em;
     margin: 10px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 2px rgba(255, 255, 255, 0.5);
     transition: background-color 0.3s, transform 0.3s;
     font-family: 'Press Start 2P', sans-serif;
   }
   
   .check-button:nth-child(1) {
-    background-color: #4caf50; /* Acelerador */
+    background-color: #6e6d69; /* Acelerador */
   }
   
   .check-button:nth-child(2) {
-    background-color: #f44336; /* Freno */
+    background-color: #6e6d69; /* Freno */
   }
   
   .check-button:nth-child(3) {
-    background-color: #9e9e9e; /* Embrague */
+    background-color: #6e6d69; /* Embrague */
   }
   
   .check-button:hover {

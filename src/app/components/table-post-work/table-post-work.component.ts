@@ -1,34 +1,60 @@
 import { Component, AfterViewInit, ViewChild } from '@angular/core';
-import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
-import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
+import { DialogDeleteTaskComponent } from '../dialog-delete-task/dialog-delete-task.component';
+import { DialogUpdateTaskComponent } from '../dialog-update-task/dialog-update-task.component';
+
 @Component({
   selector: 'app-table-post-work',
   templateUrl: './table-post-work.component.html',
   styleUrls: ['./table-post-work.component.scss'],
   standalone: true,
-  imports: [MatTableModule, MatPaginatorModule,CommonModule],
+  imports: [MatTableModule, MatPaginatorModule, CommonModule],
 })
 export class TablePostWorkComponent implements AfterViewInit {
-
   displayedColumns: string[] = ['numeroActividad', 'nombreTarea', 'fechaEntrega', 'acciones'];
   dataSource = new MatTableDataSource<Actividad>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   ngAfterViewInit() {
-    // Asegúrate de que el paginator se asigne solo después de que la vista esté inicializada
     this.dataSource.paginator = this.paginator;
   }
 
   editarActividad(numeroActividad: number) {
-    console.log(`Editar actividad con número: ${numeroActividad}`);
-    // Implementar la lógica de edición aquí
+    const actividad = this.dataSource.data.find(a => a.numeroActividad === numeroActividad);
+    const dialogRef = this.dialog.open(DialogUpdateTaskComponent, {
+      width: '400px',
+      data: { ...actividad }, // Pasamos los datos de la actividad
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        // Actualizamos la actividad con los datos devueltos por el diálogo
+        const index = this.dataSource.data.findIndex(a => a.numeroActividad === numeroActividad);
+        this.dataSource.data[index] = result;
+        this.dataSource._updateChangeSubscription(); // Refrescamos la tabla
+      }
+    });
   }
 
   eliminarActividad(numeroActividad: number) {
-    this.dataSource.data = this.dataSource.data.filter(actividad => actividad.numeroActividad !== numeroActividad);
+    const dialogRef = this.dialog.open(DialogDeleteTaskComponent, {
+      width: '300px',
+      data: { numeroActividad },
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        // Eliminamos la actividad si el usuario confirma
+        this.dataSource.data = this.dataSource.data.filter(actividad => actividad.numeroActividad !== numeroActividad);
+      }
+    });
   }
+
+  constructor(public dialog: MatDialog) {}
 }
 
 export interface Actividad {

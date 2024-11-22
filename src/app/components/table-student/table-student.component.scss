@@ -36,7 +36,7 @@
 
 .action-button {
     background-color: #d1495b;
-    color: #ffffff;
+    color: #ffffff !important; /* Forzamos que el texto sea blanco */
     border: 2px solid #b13a4b;
     border-radius: 8px;
     padding: 4px 12px;
@@ -46,7 +46,11 @@
 .action-button:hover {
     background-color: #b13a4b;
     border-color: #8f2d3b;
+    color: #ffffff !important; /* Forzamos blanco en hover */
 }
+
+
+
 
 .mat-paginator {
     background-color: #2a9d8f;

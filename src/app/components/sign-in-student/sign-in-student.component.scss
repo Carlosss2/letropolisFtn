@@ -2,7 +2,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background-color: #0056b3; /* Fondo azul */
+    background-color: #f0f8ff; /* Fondo azul */
     color: white; /* Color de texto blanco */
     margin: 0;
     padding: 0;
@@ -66,6 +66,7 @@ button {
     cursor: pointer; /* Cambia el cursor al pasar por encima */
     font-size: 16px; /* Tamaño de fuente del botón */
     transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    width: 105%;
 }
 
 button:hover {

@@ -24,6 +24,8 @@ import { Game2Component } from './components/game2/game2.component';
 import { Game3Component } from './components/game3/game3.component';
 import { Game4Component } from './components/game4/game4.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { CurseStudentComponent } from './components/curse-student/curse-student.component';
+
 
 export const routes: Routes = [
     {
@@ -104,6 +106,9 @@ export const routes: Routes = [
         path: "gameScrable",component:Game4Component
     },{
         path:"settings",component:SettingsComponent
+    },
+    {
+        path:"curse",component:CurseStudentComponent
     }
     
 

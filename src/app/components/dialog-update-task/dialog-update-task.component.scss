@@ -1,0 +1,56 @@
+mat-dialog-content {
+    font-size: 16px;
+    color: #4a4a4a;
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Espaciado uniforme entre campos */
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  mat-form-field input {
+    font-size: 14px;
+  }
+  
+  mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end; /* Botones alineados a la derecha */
+    gap: 12px; /* Espaciado entre botones */
+    margin-top: 20px;
+    border-top: 1px solid #e0e0e0; /* Separador visual con el contenido */
+    padding-top: 12px;
+  }
+  
+  button {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  
+  button[mat-button] {
+    background-color: #e0e0e0;
+    color: #333333;
+    border: 2px solid transparent;
+  }
+  
+  button[mat-button]:hover {
+    background-color: #d6d6d6;
+  }
+  
+  button[color="primary"] {
+    background-color: #1976d2;
+    color: #ffffff;
+    border: 2px solid #1565c0;
+  }
+  
+  button[color="primary"]:hover {
+    background-color: #1565c0;
+    border-color: #0d47a1;
+  }
+  
