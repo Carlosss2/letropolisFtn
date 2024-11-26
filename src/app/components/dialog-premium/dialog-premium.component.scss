@@ -1,0 +1,89 @@
+/* Estilos para el diálogo */
+mat-dialog-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #2a3b56; /* Color de texto en tonos azules, similar al estilo de BBVA */
+    margin-bottom: 16px;
+  }
+  
+  mat-dialog-content {
+    font-family: 'Arial', sans-serif;
+    padding: 16px;
+  }
+  
+  /* Estilos para el formulario */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 14px;
+    color: #151617; /* Gris suave para las etiquetas */
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  /* Inputs con bordes redondeados y sombras */
+  input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #d1d8e0;
+    background-color: #f7f9fc; /* Fondo suave */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    color: #333;
+  }
+  
+  /* Cambios al hacer foco en el input */
+  input:focus {
+    outline: none;
+    border-color: #0073e6; /* Color azul para el borde al hacer foco */
+    box-shadow: 0 0 8px rgba(0, 115, 230, 0.3); /* Resaltado azul */
+  }
+  
+  /* Estilos de los botones */
+  button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  button[type="button"] {
+    background-color: #f4f6f9; /* Gris claro para el botón de cancelar */
+    color: #0073e6;
+    border: 1px solid #0073e6;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #e2f0ff; /* Azul claro en hover */
+  }
+  
+  button[type="submit"] {
+    background-color: #0073e6; /* Azul bancario */
+    color: white;
+    border: none;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #005bb5; /* Azul más oscuro */
+  }
+  
+  /* Estilos para las acciones en el diálogo */
+  .dialog-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  

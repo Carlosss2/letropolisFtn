@@ -1,0 +1,47 @@
+<h2 mat-dialog-title>Proceso de Pago</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="paymentForm" (ngSubmit)="submitPayment()">
+    <div class="form-group">
+      <label for="student_id">ID Estudiante:</label>
+      <input matInput formControlName="student_id" />
+      <div *ngIf="paymentForm.get('student_id')?.invalid && paymentForm.get('student_id')?.touched" class="error-message">
+        El ID del estudiante es obligatorio.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="card_number">Número de Tarjeta:</label>
+      <input matInput formControlName="card_number" />
+      <div *ngIf="paymentForm.get('card_number')?.invalid && paymentForm.get('card_number')?.touched" class="error-message">
+        El número de tarjeta debe tener 16 dígitos.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="card_expiry">Fecha de Expiración:</label>
+      <input matInput formControlName="card_expiry" type="month" />
+      <div *ngIf="paymentForm.get('card_expiry')?.invalid && paymentForm.get('card_expiry')?.touched" class="error-message">
+        La fecha de expiración debe ser una fecha futura.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="card_cvc">CVC:</label>
+      <input matInput formControlName="card_cvc" type="password" />
+      <div *ngIf="paymentForm.get('card_cvc')?.invalid && paymentForm.get('card_cvc')?.touched" class="error-message">
+        El CVC debe tener 3 dígitos.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="amount">Monto:</label>
+      <input matInput formControlName="amount" type="number" value="89" readonly />
+    </div>
+
+    <div class="dialog-actions">
+      <button mat-button type="button" (click)="onNoClick()">Cancelar</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="paymentForm.invalid">Realizar Pago</button>
+    </div>
+  </form>
+</mat-dialog-content>

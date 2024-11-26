@@ -1,16 +1,61 @@
 <div class="main-container">
   <div class="profile-section">
     <div class="profile-card">
-      <img src="https://img.icons8.com/?size=100&id=AjTPlMclWxjF&format=png&color=000000" alt="Foto del Maestro" class="profile-avatar" />
+      <img
+        src="https://img.icons8.com/?size=100&id=AjTPlMclWxjF&format=png&color=000000"
+        alt="Foto del Maestro"
+        class="profile-avatar"
+      />
       <div class="profile-info">
         <h2>{{ teacherName }}</h2>
         <p>{{ teacherEmail }}</p>
         <div class="profile-buttons">
-          <button mat-raised-button color="primary" (click)="openUpdateTeacherModal()">Actualizar Datos</button>
+          
           <button mat-raised-button color="warn" class="logout-button" (click)="logout()">Cerrar Sesión</button>
         </div>
       </div>
     </div>
+  </div>
+
+
+
+
+  <div class="registration-section">
+    <h2>Dar de Alta Una Clase</h2>
+    <p class="section-description">Agrega los datos de la clase para registrarlo en el sistema.</p>
+    <form [formGroup]="addClassForm" (ngSubmit)="addClass()">
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre de la clase</mat-label>
+          <input matInput formControlName="className" />
+          <mat-error *ngIf="addClassForm.get('className')?.invalid">
+            El nombre de la clase es requerido
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Descripción de la clase</mat-label>
+          <input matInput formControlName="classDescription" />
+          <mat-error *ngIf="addClassForm.get('classDescription')?.invalid">
+            La descripción es requerida
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>ID de Clase</mat-label>
+          <input matInput formControlName="classId" />
+          <mat-error *ngIf="addClassForm.get('classId')?.invalid">
+            El ID de clase es requerido y debe ser un número
+          </mat-error>
+        </mat-form-field>
+      </div>
+  
+      <div class="form-actions">
+        <button class="action-button" type="submit" [disabled]="addClassForm.invalid">
+          Agregar Clase
+        </button>
+      </div>
+    </form>
   </div>
   
   <div class="registration-section">
@@ -18,13 +63,7 @@
     <p class="section-description">Agrega los datos del estudiante para registrarlo en el sistema.</p>
     <form [formGroup]="addStudentForm" (ngSubmit)="addStudent()">
       <div class="form-group">
-        <mat-form-field appearance="outline">
-          <mat-label>Nombre del estudiante</mat-label>
-          <input matInput formControlName="studentName" />
-          <mat-error *ngIf="addStudentForm.get('studentName')?.invalid">
-            El nombre es requerido
-          </mat-error>
-        </mat-form-field>
+        
 
         <mat-form-field appearance="outline">
           <mat-label>Matrícula</mat-label>
@@ -33,13 +72,25 @@
             Matrícula inválida
           </mat-error>
         </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>ID de Clase</mat-label>
+          <input matInput formControlName="classId" />
+          <mat-error *ngIf="addStudentForm.get('classId')?.invalid">
+            ID de Clase inválido
+          </mat-error>
+        </mat-form-field>
       </div>
 
       <div class="form-actions">
-        <button  class="action-button" type="submit" [disabled]="addStudentForm.invalid">
+        <button class="action-button" type="submit" [disabled]="addStudentForm.invalid">
           Agregar Estudiante
         </button>
       </div>
     </form>
   </div>
+
+
+
+
 </div>

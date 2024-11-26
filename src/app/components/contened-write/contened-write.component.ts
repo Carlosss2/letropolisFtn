@@ -1,30 +1,91 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-contened-write',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './contened-write.component.html',
-  styleUrl: './contened-write.component.scss'
+  styleUrls: ['./contened-write.component.scss']
 })
 export class ContenedWriteComponent {
 
   // Lista de videos con propiedades url, título y descripción
   videos = [
     {
-      url: 'https://youtu.be/ccEpTTZW34g?si=NwgkwyLLUsuep9jM',
-      title: 'Título del Video 1',
-      description: 'Descripción breve del video 1.'
+      url: 'abc.mp4',
+      title: 'Abecedario',
+      description: 'Diviértete escuchando el sonido ABC.'
     },
     {
-      url: 'ruta-del-video2.mp4',
-      title: 'Título del Video 2',
-      description: 'Descripción breve del video 2.'
+      url: 'vocales.mp4',
+      title: 'Las Vocales',
+      description: 'Diviértete aprendiendo las vocales.'
     },
     {
-      url: 'ruta-del-video3.mp4',
-      title: 'Título del Video 3',
-      description: 'Descripción breve del video 3.'
+      url: 'silabas.mp4',
+      title: 'Las Sílabas',
+      description: 'Descubre las sílabas.'
+    },
+    {
+      url: 'write4.mp4',
+      title: 'Aprender la A',
+      description: 'Descubre las vocales.'
+    },
+    {
+      url: 'write5.mp4',
+      title: 'Aprender la E',
+      description: 'Descubre las vocales.'
+    },
+    {
+      url: 'writeNew5.mp4',
+      title: 'Aprender la i',
+      description: 'Descubre las vocales.'
+    },
+    {
+      url: 'writeNew7.mp4',
+      title: 'Abecedario repaso',
+      description: 'Respuesta abecedario' 
+    },
+    {
+      url: 'write8.mp4',
+      title: 'ca ce ci co cu',
+      description: 'Respuesta abecedario'
+    },
+    {
+      url: 'writeNew9.mp4',
+      title: 'Escribir la letra m',
+      description: 'Respuesta abecedario' 
+    },
+    {
+      url: 'writeNew10.mp4',
+      title: 'ra re ri ro ru', 
+      description: 'Respuesta abecedario'
+    },
+    {
+      url: 'writeNew11.mp4',
+      title: 'La le li lo lu',
+      description: 'Respuesta abecedario' 
+    },
+    {
+      url: 'writeNew12.mp4',
+      title: 'da de di do du',
+      description: 'Respuesta abecedario' 
+    },
+    {
+      url: 'writeNew13.mp4',
+      title: 'Escribir la letra F',
+      description: 'Respuesta abecedario' 
+    },
+    {
+      url: 'writeNew14.mp4',
+      title: 'Escribir la letra q',
+      description: 'Respuesta abecedario' 
+    },
+    {
+      url: 'writeNew15.mp4',
+      title: 'va ve vi vo vu', //
+      description: 'Respuesta abecedario'
     }
     // Agrega más videos si es necesario
   ];

@@ -1,38 +1,37 @@
 <div class="mat-elevation-z8 school-table">
-    <h2 class="table-title">Actividades en mi clase</h2>
-    <table mat-table [dataSource]="dataSource">
-  
-      <!-- Número de Actividad Column -->
-      <ng-container matColumnDef="numeroActividad">
-        <th mat-header-cell *matHeaderCellDef> Número de Actividad </th>
-        <td mat-cell *matCellDef="let actividad"> {{actividad.numeroActividad}} </td>
-      </ng-container>
-  
-      <!-- Nombre de la Tarea Column -->
-      <ng-container matColumnDef="nombreTarea">
-        <th mat-header-cell *matHeaderCellDef> Nombre de la Tarea </th>
-        <td mat-cell *matCellDef="let actividad"> {{actividad.nombreTarea}} </td>
-      </ng-container>
-  
-      <!-- Fecha de Entrega Column -->
-      <ng-container matColumnDef="fechaEntrega">
-        <th mat-header-cell *matHeaderCellDef> Fecha de Entrega </th>
-        <td mat-cell *matCellDef="let actividad"> {{actividad.fechaEntrega | date}} </td>
-      </ng-container>
-  
-      <!-- Acciones Column -->
-      <ng-container matColumnDef="acciones">
-        <th mat-header-cell *matHeaderCellDef> Acciones </th>
-        <td mat-cell *matCellDef="let actividad">
-          <button mat-button class="action-button2" (click)="editarActividad(actividad.numeroActividad)">Editar</button>
-          <button mat-button class="action-button" (click)="eliminarActividad(actividad.numeroActividad)">Eliminar</button>
-        </td>
-      </ng-container>
-  
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
-  
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Seleccione la página de actividades"></mat-paginator>
-  </div>
-  
+  <h2 class="table-title">Actividades en mi clase</h2>
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- Número de Actividad Column -->
+    <ng-container matColumnDef="numeroActividad">
+      <th mat-header-cell *matHeaderCellDef> Número de Actividad </th>
+      <td mat-cell *matCellDef="let actividad"> {{actividad.act_number}} </td>
+    </ng-container>
+
+    <!-- Nombre de la Tarea Column -->
+    <ng-container matColumnDef="nombreTarea">
+      <th mat-header-cell *matHeaderCellDef> Nombre de la Tarea </th>
+      <td mat-cell *matCellDef="let actividad"> {{actividad.name}} </td>
+    </ng-container>
+
+    <!-- Fecha de Entrega Column -->
+    <ng-container matColumnDef="fechaEntrega">
+      <th mat-header-cell *matHeaderCellDef> Fecha de Entrega </th>
+      <td mat-cell *matCellDef="let actividad"> {{actividad.due_date | date}} </td>
+    </ng-container>
+
+    <!-- Acciones Column -->
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <td mat-cell *matCellDef="let actividad">
+        <button mat-button class="action-button2" (click)="editarActividad(actividad.act_number)">Editar</button>
+        <button mat-button class="action-button" (click)="eliminarActividad(actividad.act_number)">Eliminar</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Seleccione la página de actividades"></mat-paginator>
+</div>

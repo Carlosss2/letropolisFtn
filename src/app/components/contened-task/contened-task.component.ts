@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogTaskComponent } from '../dialog-task/dialog-task.component';
 @Component({
   selector: 'app-contened-task',
   standalone: true,
@@ -45,6 +47,15 @@ export class ContenedTaskComponent {
     { imagenUrl: 'https://gifss.com/dinosaurios/images/dinosaurio-34.gif', titulo: 'Tarea 34' },
     { imagenUrl: 'https://gifdb.com/images/high/hurray-cute-dinosaur-party-5rirlox41jpgv8cs.gif', titulo: 'Tarea 35' }
 ];
+constructor(private dialog: MatDialog) {}
+
+openDialog(): void {
+  const dialogRef = this.dialog.open(DialogTaskComponent);
+
+  dialogRef.afterClosed().subscribe(result => {
+    console.log('El diálogo se cerró', result);
+  });
+}
 
 colores = [
   '#FFDDC1', '#FFD1DC', '#FFC1E3', '#FFCCE3', '#F3C1FF', '#C1D3FF',

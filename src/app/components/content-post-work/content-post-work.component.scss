@@ -14,12 +14,13 @@ body {
   grid-template-columns: 2fr 1fr;
   gap: 20px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   padding: 30px;
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   border: 2px solid #004A8F;
+  margin-top: 100px;
 }
 
 .form-section {

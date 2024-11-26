@@ -21,7 +21,7 @@
           <div class="card-image-container">
             <img [src]="tarea.imagenUrl" alt="Imagen de {{ tarea.titulo }}" class="card-image">
           </div>
-          <button class="upload-button">Cargar Tarea</button>
+          <button class="upload-button" (click)="openDialog()">Cargar Tarea</button>
         </div>
       </div>
     </div>

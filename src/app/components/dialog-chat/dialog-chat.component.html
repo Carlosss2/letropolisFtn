@@ -1,0 +1,25 @@
+<div class="chat-wrapper">
+
+    <div *ngIf="isChatOpen" class="chat-container">
+        <div class="head-chatbot">
+            <h1 class="head-title">Mr.Ayuditas</h1>
+        </div>
+        <div class="messages">
+            <div *ngFor="let response of chatbotResponses" class="message" 
+                 [ngClass]="{'user-message': response.startsWith('Tú:'), 'chatbot-message': response.startsWith('LittlePaws:')}">
+                <div class="message-content">
+                    <i *ngIf="response.startsWith('Tú:')" class="fas fa-user user-icon"></i>
+                    <img *ngIf="response.startsWith('Mr.Ayuditas:')" src="https://cdn-icons-gif.flaticon.com/17428/17428653.gif" alt="chatbot avatar" class="avatar">
+                    <p class="respuesta-chat">{{ response }}</p>
+                </div>
+            </div>
+        </div>
+
+        <form [formGroup]="geminiService.form" (ngSubmit)="getAnswer()" class="input-form"> 
+            <input formControlName="userInput" type="text" placeholder="Escribe tu mensaje..." class="campo-chat"/>
+            <button type="submit" class="enviar-btn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
+</div>

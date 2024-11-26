@@ -1,0 +1,17 @@
+.notification{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: aliceblue;
+    font-weight: bold;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    &.success {
+        background-color: rgb(7, 147, 30);
+    }
+    &.error {
+        background-color: rgb(255, 0, 0);
+    }
+}

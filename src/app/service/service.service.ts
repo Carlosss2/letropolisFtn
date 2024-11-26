@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ServiceService {
 
-  private url: string = 'http://127.0.0.1:8000';
+  private url: string = 'http://35.172.18.29:8000';
 
   constructor(private http: HttpClient) {}
 

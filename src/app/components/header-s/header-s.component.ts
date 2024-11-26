@@ -10,7 +10,8 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { HomeStudemtComponent } from '../home-studemt/home-studemt.component';
-
+import { LoginStudentService } from '../../service/loginStudent/login-student.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-header-s',
   templateUrl: './header-s.component.html',
@@ -29,10 +30,20 @@ import { HomeStudemtComponent } from '../home-studemt/home-studemt.component';
 })
 export class HeaderSComponent {
   private breakpointObserver = inject(BreakpointObserver);
-
+  constructor( private login: LoginStudentService, private router: Router,){
+    
+  }
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
       shareReplay()
     );
+
+
+    logout() {
+      console.log('Cerrar sesión');
+      this.login.logoutStudent(); // Usamos el método de LoginService para cerrar sesión
+      this.router.navigate(['/landing']);
+  
+    }
 }

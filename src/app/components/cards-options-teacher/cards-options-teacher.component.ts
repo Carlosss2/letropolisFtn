@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogChatComponent } from '../dialog-chat/dialog-chat.component';
 @Component({
   selector: 'app-cards-options-teacher',
   standalone: true,
@@ -9,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class CardsOptionsTeacherComponent {
 
-  constructor(private router: Router){
+  constructor(private router: Router,private dialog: MatDialog){
 
   }
   
@@ -24,5 +26,10 @@ export class CardsOptionsTeacherComponent {
     this.router.navigate(["/seeStudent"])
   }
 
-
+  openChat() {
+    this.dialog.open( DialogChatComponent, {
+      width: '600px',
+      panelClass: 'custom-dialog-container', // Clase personalizada si necesitas más estilos
+    });
+  }
 }

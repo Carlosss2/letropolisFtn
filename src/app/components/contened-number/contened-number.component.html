@@ -1,42 +1,33 @@
-
-
-<!-- Video Container -->
+<!-- contened-write.component.html -->
 <div class="video-container">
-    <!-- Video -->
-    <video controls class="video-player">
-      <source [src]="currentVideo.url" type="video/mp4">
-      Tu navegador no soporta el elemento de video.
-    </video>
-  
-    <!-- Información del Video -->
-    <div class="video-info">
-      <h3 class="video-title">{{ currentVideo.title }}</h3>
-      <p class="video-description">{{ currentVideo.description }}</p>
-    </div>
-  
-    <!-- Botones de Navegación -->
-    <div class="video-navigation">
-      <button class="prev-button" (click)="prevVideo()">
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 20 20"><path fill="#ffffff" d="M15.5 3a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5m-5.447.214A1.25 1.25 0 0 1 12 4.252v11.5a1.25 1.25 0 0 1-1.954 1.033l-8.499-5.793a1.25 1.25 0 0 1 .007-2.07z"/></svg> Anterior
-      </button>
-      <button class="next-button" (click)="nextVideo()">
-        Siguiente <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 20 20"><path fill="#ffffff" d="M4.5 3a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5m5.447.214A1.25 1.25 0 0 0 8 4.252v11.5a1.25 1.25 0 0 0 1.954 1.033l8.5-5.793a1.25 1.25 0 0 0-.008-2.07z"/></svg>
-      </button>
-    </div>
-  
-  
+  <!-- Video -->
+  <video *ngIf="currentVideo" controls [src]="currentVideo.url" class="video-player"></video>
+
+  <!-- Título y descripción -->
+  <div class="video-info">
+    <h2 class="video-title">{{ currentVideo.title }}</h2>
+    <p class="video-description">{{ currentVideo.description }}</p>
+  </div>
+
+  <!-- Controles de navegación -->
+  <div class="video-navigation">
+    <button class="prev-button" (click)="prevVideo()"> <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 20 20"><path fill="#ffffff" d="M15.5 3a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5m-5.447.214A1.25 1.25 0 0 1 12 4.252v11.5a1.25 1.25 0 0 1-1.954 1.033l-8.499-5.793a1.25 1.25 0 0 1 .007-2.07z"/></svg> Anterior
+    </button>
     
-
-    <div class="presentation-image">
-        <img src="https://static.vecteezy.com/system/resources/previews/022/425/733/original/river-landscape-illustration-with-view-mountains-green-fields-trees-and-forest-surrounding-the-rivers-in-flat-cartoon-hand-drawn-templates-vector.jpg" alt="Bienvenida">
-        
-        
-        <div class="hola-dino">
-          <img src="https://img.genial.ly/616a2d7faec8800019ee572c/eb13c8d1-7ea5-462b-af22-c71a968be4f7.png" alt="holaDino" class="dino-gif">
-        </div>
+    <button class="next-button" (click)="nextVideo()">
+      Siguiente <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 20 20"><path fill="#ffffff" d="M4.5 3a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5m5.447.214A1.25 1.25 0 0 0 8 4.252v11.5a1.25 1.25 0 0 0 1.954 1.033l8.5-5.793a1.25 1.25 0 0 0-.008-2.07z"/></svg>
       
+    </button>
+  </div>
 
+  <div class="presentation-image">
+    <img src="https://static.vecteezy.com/system/resources/previews/022/425/733/original/river-landscape-illustration-with-view-mountains-green-fields-trees-and-forest-surrounding-the-rivers-in-flat-cartoon-hand-drawn-templates-vector.jpg" alt="Bienvenida">
+    
+    <div class="hola-dino">
+      <img src="https://i.pinimg.com/originals/8d/05/16/8d0516b7172ef7acc99de78664ef3ada.png" alt="holaDino" class="dino-gif">
+    </div>
+  </div>
 </div>
 
-
+<!-- Imagen de bienvenida con el gif Dino -->
 

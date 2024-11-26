@@ -25,7 +25,7 @@ import { Game3Component } from './components/game3/game3.component';
 import { Game4Component } from './components/game4/game4.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { CurseStudentComponent } from './components/curse-student/curse-student.component';
-
+import { authGuard } from './services/auth.guard';
 
 export const routes: Routes = [
     {
@@ -47,7 +47,7 @@ export const routes: Routes = [
     },
 
     {
-        path: "homeTeacher",component:HeaderTComponent,
+        path: "homeTeacher",component:HeaderTComponent, canActivate:[authGuard],
     },
     {
         path: "loginTeacher",component:LoginTeacherComponent
@@ -57,58 +57,58 @@ export const routes: Routes = [
         path: "signin/Student",component:SignInStudentComponent
     },
     {
-        path:"homeStudent",component:HeaderSComponent
+        path:"homeStudent",component:HeaderSComponent, canActivate:[authGuard],
     },
     {
         path:"loginStudent",component:LoginStudentComponent
     },
     {
-        path: "postWork", component:PostWorkComponent
+        path: "postWork", component:PostWorkComponent, canActivate:[authGuard],
     },
     {
-        path:"works",component:WorksComponent
+        path:"works",component:WorksComponent, canActivate:[authGuard],
     },
     {
-        path:"seeStudent",component:SeeStudentsComponent
+        path:"seeStudent",component:SeeStudentsComponent, canActivate:[authGuard],
     },
     {
-        path:"seePostWork",component:SeePostWorkComponent
+        path:"seePostWork",component:SeePostWorkComponent, canActivate:[authGuard],
     },
     {
-        path:"workStudents",component:SeeWorksComponent,
+        path:"workStudents",component:SeeWorksComponent, canActivate:[authGuard],
     },
     {
-        path:"curseReading",component:CurseReadingComponent
+        path:"curseReading",component:CurseReadingComponent, canActivate:[authGuard],
     },
     {
-        path:"curseWriting",component:CurseWritingComponent
+        path:"curseWriting",component:CurseWritingComponent, canActivate:[authGuard],
     },
     {
-        path:"MyTask",component:TasksComponent
+        path:"MyTask",component:TasksComponent, canActivate:[authGuard],
     },
     {
-        path:"curseNumber",component:CurseNumberComponent
+        path:"curseNumber",component:CurseNumberComponent, canActivate:[authGuard],
     },
     {
-        path:"rewards",component:RewardsComponent
+        path:"rewards",component:RewardsComponent, canActivate:[authGuard],
     },
     {
-        path:"videogames",component:VideogamesComponent
+        path:"videogames",component:VideogamesComponent, canActivate:[authGuard],
     },
     {
-        path:"gameAverage",component:Game1Component
+        path:"gameAverage",component:Game1Component, canActivate:[authGuard],
     },
     {
-        path:"gameCars",component:Game2Component
+        path:"gameCars",component:Game2Component, canActivate:[authGuard],
     },{
-        path:"gameSpace",component:Game3Component
+        path:"gameSpace",component:Game3Component, canActivate:[authGuard],
     },{
-        path: "gameScrable",component:Game4Component
+        path: "gameScrable",component:Game4Component, canActivate:[authGuard],
     },{
-        path:"settings",component:SettingsComponent
+        path:"settings",component:SettingsComponent, canActivate:[authGuard],
     },
     {
-        path:"curse",component:CurseStudentComponent
+        path:"curse",component:CurseStudentComponent, canActivate:[authGuard],
     }
     
 

@@ -1,45 +1,78 @@
+/* Estilo para el contenido del diálogo */
 mat-dialog-content {
-    font-size: 16px;
-    color: #4a4a4a;
-    margin: 16px 0;
-    text-align: center;
-    line-height: 1.5;
-  }
-  
-  mat-dialog-actions {
-    display: flex;
-    justify-content: space-between;
-    padding: 16px 0 0;
-    border-top: 1px solid #e0e0e0;
-  }
-  
-  button {
-    font-size: 14px;
-    font-weight: bold;
-    padding: 8px 16px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-  }
-  
-  button[mat-button] {
-    background-color: #e0e0e0;
-    color: #333333;
-    border: 2px solid transparent;
-  }
-  
-  button[mat-button]:hover {
-    background-color: #d6d6d6;
-  }
-  
-  button[color="warn"] {
-    background-color: #d1495b;
-    color: #ffffff;
-    border: 2px solid #b13a4b;
-  }
-  
-  button[color="warn"]:hover {
-    background-color: #b13a4b;
-    border-color: #8f2d3b;
-  }
-  
+  font-size: 16px;
+  color: #4a4a4a;
+  margin: 20px 0;
+  text-align: center;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+
+/* Estilo para las acciones del diálogo (botones) */
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 24px 16px;
+  border-top: 1px solid #e0e0e0;
+  background-color: #f9f9f9;
+}
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* Estilo general de los botones */
+button {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  min-width: 120px; /* Asegura que los botones tengan un tamaño mínimo */
+}
+
+/* Estilo para los botones con el atributo 'mat-button' */
+button[mat-button] {
+  background-color: #e0e0e0;
+  color: #333;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect para el botón con mat-button */
+button[mat-button]:hover {
+  background-color: #d6d6d6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para el botón con color "warn" (rojo de eliminación) */
+button[color="warn"] {
+  background-color: #d1495b;
+  color: white;
+  border: 2px solid #b13a4b;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect para el botón de color "warn" */
+button[color="warn"]:hover {
+  background-color: #b13a4b;
+  border-color: #8f2d3b;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto de foco para los botones (cuando están seleccionados o con el cursor sobre ellos) */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.6);
+}
+
+/* Efecto de foco para los botones de color "warn" */
+button[color="warn"]:focus {
+  box-shadow: 0 0 6px rgba(211, 73, 91, 0.6);
+}

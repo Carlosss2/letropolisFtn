@@ -1,22 +1,22 @@
 <div class="welcome-container">
-    <div class="presentation-image">
-      <img src="https://image.freepik.com/vector-gratis/ninos-haciendo-tarea-computadora-libro-lapiz_7710-207.jpg" alt="Bienvenida">
-    </div>
-    <div>
-      <h2 class="titulo">Tareas Asignadas por tu maestro</h2>
-      <div class="tareas-grid">
-        <div *ngFor="let tarea of tareas" class="tarea-card">
-          <div class="card-info-container">
-            <div class="card-header">{{ tarea.nombreTarea }}</div>
-            <div class="card-content">
-              <h4>Número de Actividad: {{ tarea.numeroActividad }}</h4>
-              <p><strong>Descripción:</strong> {{ tarea.descripcion }}</p>
-            </div>
+  <div class="presentation-image">
+    <img src="https://image.freepik.com/vector-gratis/ninos-haciendo-tarea-computadora-libro-lapiz_7710-207.jpg" alt="Bienvenida">
+  </div>
+  <div>
+    <h2 class="titulo">Tareas Asignadas por tu maestro</h2>
+    <div class="tareas-grid">
+      <div *ngFor="let tarea of tareas" class="tarea-card">
+        <div class="card-info-container">
+          <div class="card-header">{{ tarea.name }}</div>
+          <div class="card-content">
+            <h4>Número de Actividad: {{ tarea.act_number }}</h4>
+            <h4>Fecha de Entrega: {{tarea.due_date}} </h4>
+            <p><strong>Descripción:</strong> {{ tarea.description }}</p>
           </div>
-          <!-- Botón para cargar tarea -->
-          <button class="load-task-button">Cargar Tarea</button>
         </div>
+        <!-- Botón para cargar tarea -->
+        <button class="load-task-button" (click)="openDialog()">Cargar Tarea</button>
       </div>
     </div>
   </div>
-  
+</div>

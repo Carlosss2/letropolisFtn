@@ -8,22 +8,71 @@ import { CommonModule } from '@angular/common';
   styleUrl: './contened-number.component.scss'
 })
 export class ContenedNumberComponent {
-
   videos = [
     {
-      url: 'https://youtu.be/ccEpTTZW34g?si=NwgkwyLLUsuep9jM',
-      title: 'Título del Video 1',
-      description: 'Descripción breve del video 1.'
+      url: 'numeros1.mp4',
+      title: 'Numeros divertidos',
+      description: 'Divierte aprendiendo los numeros.'
     },
     {
-      url: 'ruta-del-video2.mp4',
-      title: 'Título del Video 2',
-      description: 'Descripción breve del video 2.'
+      url: 'numeros2.mp4',
+      title: 'Cantando numeros',
+      description: 'Con toda la actitud para aprender'
     },
     {
-      url: 'ruta-del-video3.mp4',
-      title: 'Título del Video 3',
-      description: 'Descripción breve del video 3.'
+      url: 'numeros3.mp4',
+      title: 'Contando 1,2,3',
+      description: 'Diviertete con todo'
+    },
+    {
+      url: 'numeros4.mp4',
+      title: 'Contando 1,2,3,4',
+      description: 'Diviertete con nosotros'
+    },
+    {
+      url: 'numeros5.mp4',
+      title: 'Contando 1,2,3,4,5',
+      description: 'Diviertete con todoo'
+    }, {
+      url: 'numeros6.mp4',
+      title: 'Contando 1,2,3,4,5,6',
+      description: 'Diviertete con todito'
+    }, {
+      url: 'numeros7.mp4',
+      title: 'Contando 1,2,3,4,5,6,7',
+      description: 'Diviertete con todooooo'
+    }, {
+      url: 'numeros8.mp4',
+      title: 'Contando 1,2,3,4,5,6,7,8',
+      description: 'Diviertete con toditoooo'
+    },{
+      url: 'numeros9.mp4',
+      title: 'Contando 1,2,3,4,5,6,7,8,9',
+      description: 'Diviertete con todooooo'
+    },{
+      url: 'numeros10.mp4',
+      title: 'Contando 1,2,3,4,5,6,7,8,9,10',
+      description: 'Diviertete con todooooo'
+    },{
+      url: 'numeros11.mp4',
+      title: 'Contando 1,2,3,4,5,6,7,8,10,11',
+      description: 'Diviertete aprendiendo'
+    },{
+      url: 'numeros12.mp4',
+      title: 'Contando 1,2,3,4,5,6,7,8,10,11,12',
+      description: 'Diviertete aprendiendo'
+    },{
+      url: 'numeros13.mp4',
+      title: 'Contando 1,2,3,4,5,6,7,8,10,11,12,13',
+      description: 'Diviertete aprendiendo'
+    },{
+      url: 'numeros14.mp4',
+      title: 'Contando 1,2,3,4,5,6,7,8,10,11,12,13,14',
+      description: 'Diviertete aprendiendo'
+    },{
+      url: 'numeros15.mp4',
+      title: 'Contando 1,2,3,4,5,6,7,8,10,11,12,13,15',
+      description: 'Diviertete aprendiendo'
     }
     // Agrega más videos si es necesario
   ];

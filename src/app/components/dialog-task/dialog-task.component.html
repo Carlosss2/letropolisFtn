@@ -1,0 +1,36 @@
+<h2>Cargar Tarea</h2>
+
+<div class="dialog-content">
+  <form>
+    <div class="form-group">
+      <label for="idTask">ID de la tarea</label>
+      <input type="text" id="idTask" [(ngModel)]="idTask" name="idTask">
+    </div>
+
+    <div class="form-group">
+      <label for="idStudent">ID del estudiante</label>
+      <input type="text" id="idStudent" [(ngModel)]="idStudent" name="idStudent">
+    </div>
+
+    <!-- Formulario para seleccionar la imagen -->
+    <div class="form-group">
+      <label for="taskImage">Imagen de la tarea</label>
+      <input type="file" id="taskImage" (change)="onFileChange($event)">
+      <div *ngIf="imageUrl">
+        <small>{{ imageUrl }}</small>
+      </div>
+    </div>
+
+    <!-- Vista previa de la imagen seleccionada -->
+    <div *ngIf="imageUrl" class="image-preview">
+      <img [src]="imageUrl" alt="Vista previa de la imagen" class="preview-img"/>
+    </div>
+  </form>
+
+  <div class="dialog-actions">
+    <button class="btn" (click)="closeDialog()">Cancelar</button>
+    <button class="btn" (click)="submitTask()">Cargar</button>
+  </div>
+</div>
+
+
